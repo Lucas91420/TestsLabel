@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "13",
+    "@types/react-dom": "^19.1.5",
     "msw": "1"
   }
 }

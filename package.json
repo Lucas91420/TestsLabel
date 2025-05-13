@@ -13,6 +13,12 @@
     "build:react": "yarn workspace react-app build",
     "start:react": "yarn workspace react-app start",
     "build:ng": "yarn workspace ng-app build",
-    "start:ng": "yarn workspace ng-app start"
+    "start:ng": "yarn workspace ng-app start",
+    "e2e": "playwright test --config=e2e/playwright.config.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
