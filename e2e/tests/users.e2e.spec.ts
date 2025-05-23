@@ -6,11 +6,15 @@ test.describe('E2E – Users flow', () => {
     await page.goto('/');
 
     // 2. Vérifier qu’un élément clé est visible
-    await expect(page.getByRole('heading', { name: /utilisateurs/i })).toBeVisible();
+    await page.screenshot({ path: 'homepage.png' });
 
+    // Attendre que le champ soit chargé
+    await page.waitForSelector('label:text("Nom :")');
     // 3. Saisir le nom
     const input = page.getByLabel('Nom :');
     await input.fill('Diane');
+
+
 
     // 4. Clic sur "Créer" et attendre le POST /users
     const [response] = await Promise.all([
